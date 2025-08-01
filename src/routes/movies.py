@@ -172,5 +172,4 @@ async def delete_movie(movie_id: int, db: AsyncSession = Depends(get_db)):
 
     await db.delete(movie)
     await db.commit()
-    movie = await load_movie_with_relations(db, movie.id)
     return None

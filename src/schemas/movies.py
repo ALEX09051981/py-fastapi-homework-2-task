@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from datetime import date
 from typing import List, Optional
 from pydantic import BaseModel, Field, ConfigDict
@@ -119,6 +121,6 @@ class MovieUpdateSchema(BaseModel):
 
 class MovieUpdateResponseSchema(BaseModel):
     detail: str
-    movie: "MovieDetailSchema"
+    movie: MovieDetailSchema
 
     model_config = ConfigDict(from_attributes=True)

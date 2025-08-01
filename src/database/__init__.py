@@ -11,18 +11,6 @@ from .models import (
 
 from .session_sqlite import reset_sqlite_database as reset_database
 
-__all__ = [
-    "Base",
-    "MovieModel",
-    "GenreModel",
-    "ActorModel",
-    "LanguageModel",
-    "CountryModel",
-    "reset_database",
-    "get_db_contextmanager",
-    "get_db"
-]
-
 environment = os.getenv("ENVIRONMENT", "developing")
 
 if environment == "testing":
@@ -35,3 +23,15 @@ else:
         get_postgresql_db_contextmanager as get_db_contextmanager,
         get_postgresql_db as get_db,
     )
+
+__all__ = [
+    "Base",
+    "MovieModel",
+    "GenreModel",
+    "ActorModel",
+    "LanguageModel",
+    "CountryModel",
+    "reset_database",
+    "get_db_contextmanager",
+    "get_db"
+]

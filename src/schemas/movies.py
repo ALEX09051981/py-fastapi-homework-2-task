@@ -105,7 +105,7 @@ class MovieCreateSchema(BaseModel):
 
 class MovieUpdateSchema(BaseModel):
     name: Optional[str] = None
-    date: Optional[date] = None
+    release_date: Optional[date] = None
     score: Optional[float] = None
     overview: Optional[str] = None
     status: Optional[str] = None
